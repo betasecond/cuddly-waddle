@@ -11,6 +11,7 @@
     <modules>
         <module>json.parser</module>
         <module>ics.generator</module>
+        <module>ics.struct</module>
     </modules>
 
     <properties>
