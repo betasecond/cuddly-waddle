@@ -16,6 +16,7 @@ import java.util.Map;
 
 public class IcsGeneratorImpl implements IcsGenerator {
     private final LocalDate semesterStartDate;
+    private ZoneId shanghaiZone = ZoneId.of("Asia/Shanghai");
 
     public IcsGeneratorImpl(LocalDate semesterStartDate) {
         this.semesterStartDate = semesterStartDate;
@@ -57,8 +58,12 @@ public class IcsGeneratorImpl implements IcsGenerator {
                 LocalDateTime startDateTime = LocalDateTime.of(eventDate, startTime);
                 LocalDateTime endDateTime = LocalDateTime.of(eventDate, endTime);
 
-                event.setDateStart(Date.from(startDateTime.atZone(ZoneId.systemDefault()).toInstant()));
-                event.setDateEnd(Date.from(endDateTime.atZone(ZoneId.systemDefault()).toInstant()));
+                ZonedDateTime startZonedDateTime = ZonedDateTime.of(startDateTime, shanghaiZone);
+                ZonedDateTime endZonedDateTime = ZonedDateTime.of(endDateTime, shanghaiZone);
+
+
+                event.setDateStart(Date.from(startZonedDateTime.toInstant()));
+                event.setDateEnd(Date.from(endZonedDateTime.toInstant()));
 
                 event.setLocation(activity.building() + ", " + activity.room() + ", " + activity.campus());
 
