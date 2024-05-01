@@ -1,6 +1,7 @@
 package edu.jimei.utils;
 
 import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializerProvider;
@@ -31,6 +32,16 @@ public class JacksonConfig {
 
         return mapper;
 
+    }
+
+    public static String serialize(Object obj) throws JsonProcessingException {
+        ObjectMapper mapper = getObjectMapper();
+        return mapper.writeValueAsString(obj);
+    }
+
+    public static <T> T deserialize(String json, Class<T> clazz) throws JsonProcessingException {
+        ObjectMapper mapper = getObjectMapper();
+        return mapper.readValue(json, clazz);
     }
 
 

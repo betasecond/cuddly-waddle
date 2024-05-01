@@ -10,13 +10,20 @@ import java.io.IOException;
 
 public class CourseScheduleSerializer extends JsonSerializer<CourseSchedule> {
     /**
-     * @param courseSchedule
-     * @param jsonGenerator
-     * @param serializerProvider
+     * @param provider
+     * @param jgen
+     * @param value
      * @throws IOException
      */
     @Override
-    public void serialize(CourseSchedule courseSchedule, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
-
+    public void serialize(CourseSchedule value, JsonGenerator jgen, SerializerProvider provider) throws IOException {
+        jgen.writeStartObject();
+        jgen.writeFieldName("activities");
+        jgen.writeStartArray();
+        for (CourseActivity activity : value.activities()) {
+            provider.defaultSerializeValue(activity, jgen);
+        }
+        jgen.writeEndArray();
+        jgen.writeEndObject();
     }
 }
