@@ -15,7 +15,7 @@ import java.util.List;
 public class CourseScheduleDeserializer extends JsonDeserializer<CourseSchedule> {
 
     @Override
-    public CourseSchedule deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JacksonException {
+    public CourseSchedule deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException {
         JsonNode node = jp.getCodec().readTree(jp);
         JsonNode activitiesNode = node.get("studentTableVm").get("activities");
         List<CourseActivity> activities = new ArrayList<>();
