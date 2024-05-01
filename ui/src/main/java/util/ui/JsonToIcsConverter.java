@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import util.MainProcess.ProcessResult;
 
 import java.io.File;
-
+import java.io.IOException;
 
 public class JsonToIcsConverter extends Application{
     @Override
@@ -42,7 +42,7 @@ public class JsonToIcsConverter extends Application{
             if (db.hasFiles()) {
                 success = true;
                 // 假设拖入了一个文件
-                inputPathField.setText(db.getFiles().getFirst().getAbsolutePath());
+                inputPathField.setText(db.getFiles().get(0).getAbsolutePath());
             }
             event.setDropCompleted(success);
             event.consume();

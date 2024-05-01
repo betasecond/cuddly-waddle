@@ -1,8 +1,8 @@
 package util.MainProcess;
 
 public class ProcessResult {
-    private final boolean success;
-    private final String message;
+    private boolean success;
+    private String message;
 
     public ProcessResult(boolean success, String message) {
         this.success = success;
