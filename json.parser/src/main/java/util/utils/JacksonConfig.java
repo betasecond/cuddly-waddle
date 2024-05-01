@@ -28,7 +28,7 @@ public final class JacksonConfig {
 
     }
 
-    public static String serialize(Object obj) throws JsonProcessingException {
+    @Deprecated public static String serialize(Object obj) throws JsonProcessingException {
         ObjectMapper mapper = getObjectMapper();
         return mapper.writeValueAsString(obj);
     }

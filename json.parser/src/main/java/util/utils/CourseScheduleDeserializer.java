@@ -13,13 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseScheduleDeserializer extends JsonDeserializer<CourseSchedule> {
-    /**
-     * @param ctxt
-     * @param jp
-     * @return
-     * @throws IOException
-     * @throws JacksonException
-     */
+
     @Override
     public CourseSchedule deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JacksonException {
         JsonNode node = jp.getCodec().readTree(jp);
