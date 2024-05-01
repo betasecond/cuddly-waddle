@@ -1,5 +1,5 @@
 module ics.generator {
     requires ics.struct;
-    requires biweekly;
+    requires net.sf.biweekly;
     exports ics;
 }
