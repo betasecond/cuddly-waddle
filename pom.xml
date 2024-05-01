@@ -12,6 +12,7 @@
         <module>json.parser</module>
         <module>ics.generator</module>
         <module>ics.struct</module>
+        <module>main</module>
     </modules>
 
     <properties>

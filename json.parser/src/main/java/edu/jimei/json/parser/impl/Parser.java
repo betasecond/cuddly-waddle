@@ -17,7 +17,7 @@ public class Parser implements ParserService {
         try {
             return JacksonConfig.deserialize(json, CourseSchedule.class);
         } catch (JsonProcessingException e) {
-            System.err.println("Failed to parse JSON: " + e.getMessage());
+            System.err.println("Failed to parse JNSO: " + e.getMessage());
             return null;
         }
     }

@@ -23,7 +23,7 @@ public class CourseScheduleDeserializer extends JsonDeserializer<CourseSchedule>
     @Override
     public CourseSchedule deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JacksonException {
         JsonNode node = jp.getCodec().readTree(jp);
-        JsonNode activitiesNode = node.get("activities");
+        JsonNode activitiesNode = node.get("studentTableVm").get("activities");
         List<CourseActivity> activities = new ArrayList<>();
 
         if (activitiesNode != null && activitiesNode.isArray()) {
