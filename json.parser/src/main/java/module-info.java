@@ -1,4 +1,4 @@
-module edu.jimei.app.json.parser {
+module json.parser {
     requires com.fasterxml.jackson.databind;
     requires ics.struct;
     requires java.logging;

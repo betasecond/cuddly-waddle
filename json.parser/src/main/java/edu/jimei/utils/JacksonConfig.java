@@ -12,7 +12,7 @@ import edu.jimei.ics.struct.CourseSchedule;
 import java.io.IOException;
 import java.util.Date;
 
-public class JacksonConfig {
+public final class JacksonConfig {
     private JacksonConfig(){}
 
     public static ObjectMapper getObjectMapper(){
