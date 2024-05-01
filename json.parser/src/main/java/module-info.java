@@ -3,5 +3,6 @@ module json.parser {
     requires ics.struct;
     requires java.logging;
 
-    exports edu.jimei.json.parser;
+    exports util.json.parser;
+
 }
