@@ -10,10 +10,6 @@ import java.io.IOException;
 
 public class CourseScheduleSerializer extends JsonSerializer<CourseSchedule> {
     /**
-     * @param provider
-     * @param jgen
-     * @param value
-     * @throws IOException
      */
     @Override
     public void serialize(CourseSchedule value, JsonGenerator jgen, SerializerProvider provider) throws IOException {

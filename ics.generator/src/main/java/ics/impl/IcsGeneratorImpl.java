@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class IcsGeneratorImpl implements IcsGenerator {
     private final LocalDate semesterStartDate;
-    private ZoneId shanghaiZone = ZoneId.of("Asia/Shanghai");
+    private final ZoneId shanghaiZone = ZoneId.of("Asia/Shanghai");
 
     public IcsGeneratorImpl(LocalDate semesterStartDate) {
         this.semesterStartDate = semesterStartDate;

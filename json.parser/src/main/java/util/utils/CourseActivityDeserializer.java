@@ -14,15 +14,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class CourseActivityDeserializer extends JsonDeserializer<CourseActivity> {
-    /**
-     * @param jsonParser
-     * @param deserializationContext
-     * @return
-     * @throws IOException
-     * @throws JacksonException
-     */
+
     @Override
-    public CourseActivity deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
+    public CourseActivity deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
         JsonNode node = jsonParser.getCodec().readTree(jsonParser);
         int lessonId = node.get("lessonId").asInt();
         String courseCode = node.hasNonNull("courseCode") ? node.get("courseCode").asText() : null;
