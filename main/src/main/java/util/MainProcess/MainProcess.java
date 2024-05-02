@@ -16,15 +16,15 @@ import java.time.LocalDate;
 public class MainProcess {
     public static void main(String[] args) {
         // 检查命令行参数是否提供了文件路径
-//        if (args.length < 1) {
-//            System.out.println("Usage: java Main <path_to_json_file>");
-//            return;
-//        }
-//
-//        String filePath = args[0];
-//        Path path = Paths.get(filePath);
-        String filepath = "C:\\Users\\nbdhc\\WebstormProjects\\kebiao\\kebiao.json";
-        Path path = Paths.get(filepath);
+        if (args.length < 1) {
+            System.out.println("Usage: java Main <path_to_json_file>");
+            return;
+        }
+
+        String filePath = args[0];
+        Path path = Paths.get(filePath);
+//        String filepath = "C:\\Users\\nbdhc\\WebstormProjects\\kebiao\\kebiao.json";
+//        Path path = Paths.get(filepath);
 
         try {
             // 读取文件内容
