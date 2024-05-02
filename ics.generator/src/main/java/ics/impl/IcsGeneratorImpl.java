@@ -53,7 +53,10 @@ public class IcsGeneratorImpl implements IcsGenerator {
                 LocalDate eventDate = semesterStartDate.plusWeeks(weekIndex - 1)
                         .with(dayMapping.get(activity.weekday()));
                 LocalTime startTime = TimeSlot.values()[activity.startUnit() - 1].getStartTime();
-                LocalTime endTime = TimeSlot.values()[activity.startUnit() - 1].getEndTime();
+//                debug
+                System.out.println(activity.endUnit()-1);
+                System.out.println(TimeSlot.values()[10].getEndTime());
+                LocalTime endTime = TimeSlot.values()[activity.endUnit() - 1].getEndTime();
 
                 LocalDateTime startDateTime = LocalDateTime.of(eventDate, startTime);
                 LocalDateTime endDateTime = LocalDateTime.of(eventDate, endTime);
