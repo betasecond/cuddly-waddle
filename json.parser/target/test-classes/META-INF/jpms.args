@@ -1,4 +1,0 @@
---patch-module
-json.parser=_
---add-reads
-json.parser=ALL-UNNAMED
