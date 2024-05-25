@@ -16,6 +16,9 @@ repositories {
 
 dependencies {
     implementation(compose.desktop.currentOs)
+    implementation("io.github.epicarchitect:calendar-compose-basis-desktop:1.0.5")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
     // 添加 ProGuard 依赖
     runtimeOnly("com.guardsquare:proguard-gradle:7.4.2")
     implementation(project(":ics.struct"))
