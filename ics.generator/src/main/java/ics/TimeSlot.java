@@ -7,6 +7,7 @@ public enum TimeSlot {
     SLOT_3(LocalTime.of(10, 5), LocalTime.of(10, 50)),
     SLOT_4(LocalTime.of(11, 5), LocalTime.of(11, 50)),
     SLOT_5(LocalTime.of(14, 0), LocalTime.of(14, 45)),
+    SLOT_6(LocalTime.of(14, 50), LocalTime.of(15, 35)),
     SLOT_7(LocalTime.of(15, 55), LocalTime.of(16, 40)),
     SLOT_8(LocalTime.of(16, 45), LocalTime.of(17, 30)),
     SLOT_9(LocalTime.of(19, 0), LocalTime.of(19, 45)),
