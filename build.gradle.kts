@@ -35,7 +35,7 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "coursapp-kt"
+            packageName = "cuddly-waddle"
             packageVersion = "1.0.0"
         }
     }

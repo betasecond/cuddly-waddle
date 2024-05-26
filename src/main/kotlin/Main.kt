@@ -22,7 +22,7 @@ import java.io.File
 @Composable
 @Preview
 fun App() {
-    var inputPath by remember { mutableStateOf("输入 JSON 文件路径") }
+    var inputPath by remember { mutableStateOf("输入 JSON 文件路径或拖入 JSON 文件") }
     val userHome = System.getProperty("user.home")
     var outputPath by remember { mutableStateOf("$userHome/Downloads/output.ics") }
     var alertMessage by remember { mutableStateOf<String?>(null) }
