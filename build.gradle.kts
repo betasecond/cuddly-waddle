@@ -19,8 +19,9 @@ dependencies {
     implementation("io.github.epicarchitect:calendar-compose-basis-desktop:1.0.5")
 
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
-    // 添加 ProGuard 依赖
+    // https://mvnrepository.com/artifact/com.guardsquare/proguard-gradle
     runtimeOnly("com.guardsquare:proguard-gradle:7.4.2")
+
     implementation(project(":ics.struct"))
     implementation(project(":json.parser"))
     implementation(project(":ics.generator"))

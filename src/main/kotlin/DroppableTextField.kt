@@ -28,7 +28,7 @@ fun DroppableTextField(
             onPathChange(newValue.text)
         },
         modifier = Modifier
-            .border(4.dp, if (isDroppable) Color.Green else Color.Red)
+            .border(4.dp, Color.White)
             .onExternalDrag(
                 onDragStart = { externalDragValue ->
                     isDroppable = externalDragValue.dragData is androidx.compose.ui.DragData.FilesList
