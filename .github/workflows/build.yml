@@ -30,7 +30,11 @@ jobs:
           icacls gradlew /grant Everyone:F
       - name: Build Windows MSI
         run: ./gradlew packageMSI
-
+      - name: List root directory contents for debugging
+        run: |
+          Get-ChildItem -Recurse
+      - name: List directory contents for debugging
+        run: dir build\compose\binaries\main
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
