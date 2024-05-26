@@ -22,8 +22,8 @@ jobs:
           distribution: 'adopt'
           java-version: '21'
 
-      - name: Set up Kotlin
-        uses: fwilhe2/setup-kotlin@0.2.0
+      - name: Use System Kotlin
+        run: kotlinc -version
 
       - name: Grant execute permission for Gradlew
         run: |
