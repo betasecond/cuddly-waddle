@@ -59,12 +59,7 @@ fun App() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            TextField(
-                value = inputPath,
-                onValueChange = { inputPath = it },
-                modifier = Modifier.weight(1f).padding(end = 8.dp),
-                label = { Text("输入文件路径") }
-            )
+            DroppableTextField()
             Button(onClick = {
                 val fileChooser = javax.swing.JFileChooser()
                 fileChooser.dialogTitle = "选择 JSON 文件"

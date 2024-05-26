@@ -1,13 +1,12 @@
 import ics.IcsGenerator
 import ics.IcsGeneratorFactory
-import util.ics.struct.CourseSchedule
+import struct.CourseSchedule
 import util.json.parser.ParserService
 import util.json.parser.ParserServiceFactory
 import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.time.LocalDate
-import java.time.MonthDay
 
 object MainProcess {
     @JvmStatic
