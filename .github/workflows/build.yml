@@ -29,4 +29,5 @@ jobs:
         run: |
           icacls gradlew /grant Everyone:F
       - name: Build Windows MSI
-        run: .\gradlew.bat buildWindowsMsi
+        run: ./gradlew packageMSI
+
