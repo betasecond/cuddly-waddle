@@ -1,6 +1,7 @@
 import ics.IcsGenerator
 import ics.IcsGeneratorFactory
-import struct.CourseSchedule
+import util.ics.struct.CourseSchedule
+
 import util.json.parser.ParserService
 import util.json.parser.ParserServiceFactory
 import java.io.IOException

@@ -59,7 +59,10 @@ fun App() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            DroppableTextField()
+            DroppableTextField(
+                path = inputPath,
+                onPathChange = { newpath -> inputPath = newpath },
+            )
             Button(onClick = {
                 val fileChooser = javax.swing.JFileChooser()
                 fileChooser.dialogTitle = "选择 JSON 文件"
@@ -103,12 +106,7 @@ fun App() {
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-//            Button(onClick = { calendarState.currentMonth.addMonths(1) }) {
-//                Text("上个月")
-//            }
-//            Button(onClick = { calendarState.currentMonth.addMonths(-1) }) {
-//                Text("下个月")
-//            }
+
             Button(onClick = { calendarState.currentMonth = calendarState.currentMonth.addMonths(Operator.PrevMonth.months) }) {
                 Text("上个月")
             }

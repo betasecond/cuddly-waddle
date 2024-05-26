@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    java
 }
 
 group = "edu.jimei"
@@ -16,4 +17,14 @@ java {
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
+}
+sourceSets {
+    main {
+        java.srcDirs("src/main/java")
+        kotlin.srcDirs("src/main/kotlin")
+    }
+    test {
+        java.srcDirs("src/test/java")
+        kotlin.srcDirs("src/test/kotlin")
+    }
 }

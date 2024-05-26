@@ -1,5 +1,6 @@
 package util.json.parser;
 
+
 import util.ics.struct.CourseSchedule;
 
 /**

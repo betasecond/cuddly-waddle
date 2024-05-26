@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import util.ics.struct.CourseActivity;
+import util.ics.struct.CourseSchedule;
 
 import java.io.IOException;
 import java.util.ArrayList;

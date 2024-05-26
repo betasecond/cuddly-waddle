@@ -1,6 +1,7 @@
 package util.json.parser.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+
 import util.ics.struct.CourseSchedule;
 import util.json.parser.ParserService;
 import util.utils.JacksonConfig;

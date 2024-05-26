@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    java
 }
 
 group = "edu.jimei"
